@@ -14,7 +14,7 @@ Os depoimentos se referem ao Hashrate Manager, e não a todos os serviços da ag
 
 ## Atualizações
 
-Edite `index.html`, `styles.css`, `personal.css` e `script.js`. `personal.css` define a identidade pessoal sobre a estrutura base. O contato de atendimento é definido em `site-config.js`, usando WhatsApp no formato internacional apenas com dígitos ou um e-mail. O link de WhatsApp prepara uma mensagem no aplicativo do visitante; não envia mensagens automaticamente. Para incluir um retrato de Lindomar, use uma foto fornecida por ele no elemento `personal-portrait`, definindo `src` e removendo `hidden`; o monograma é substituído automaticamente.
+Edite `index.html`, `story.css` e `story.js`. A abertura mobile first usa rolagem nativa para controlar quatro cenas em uma ?rea fixa. A foto fornecida por Lindomar est? em `assets/lindomar.png`. A prefer?ncia por movimento reduzido mant?m uma abertura est?tica, com op??o de ativar a apresenta??o. `script.js` controla navega??o, depoimentos e contatos; `site-config.js` define WhatsApp e e-mail.
 
 ## Prévia local
 
