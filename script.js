@@ -11,19 +11,6 @@ navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', 
   toggle.setAttribute('aria-label', 'Abrir menu');
   navigation.classList.remove('open');
 }));
-const flows = {
-  atendimento: ['Uma nova mensagem', 'Organiza e encaminha', 'Atendimento direcionado'],
-  rotina: ['Uma tarefa repetitiva', 'Conecta suas ferramentas', 'Informação organizada']
-};
-document.querySelectorAll('[data-flow]').forEach(button => button.addEventListener('click', () => {
-  const values = flows[button.dataset.flow];
-  ['flow-input', 'flow-action', 'flow-output'].forEach((id, i) => document.getElementById(id).textContent = values[i]);
-  document.querySelectorAll('[data-flow]').forEach(item => {
-    const active = item === button;
-    item.classList.toggle('active', active);
-    item.setAttribute('aria-pressed', String(active));
-  });
-}));
 const dialog = document.querySelector('#proof-dialog');
 let proofTrigger;
 document.querySelectorAll('[data-proof]').forEach(button => button.addEventListener('click', () => {
@@ -41,7 +28,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 const config = window.AGENTEDEV_CONFIG || {};
 const contact = document.querySelector('#contact-link');
 const contactEmail = document.querySelector('#contact-email');
-const message = 'Olá, Lindomar! Conheci a AgenteDev.ia e gostaria de conversar sobre um projeto.';
+const message = 'Olá, Lindomar! Quero conversar sobre consultoria de IA ou desenvolvimento para meu negócio.';
 if (config.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.email)) {
   contactEmail.href = `mailto:${config.email}`;
   contactEmail.textContent = config.email;
@@ -51,6 +38,9 @@ if (config.whatsapp && /^\d{10,15}$/.test(config.whatsapp)) {
   contact.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`;
   contact.target = '_blank'; contact.rel = 'noopener noreferrer';
   contact.hidden = false; document.querySelector('#contact-pending').hidden = true;
+  document.querySelectorAll('[data-contact="consultoria"]').forEach(link => {
+    link.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent('Olá, Lindomar! Quero conversar sobre consultoria de IA para meu negócio.')}`;
+  });
 } else if (config.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.email)) {
   contact.href = `mailto:${config.email}?subject=${encodeURIComponent('Projeto com a AgenteDev.ia')}&body=${encodeURIComponent(message)}`;
   contact.hidden = false; document.querySelector('#contact-pending').hidden = true;
