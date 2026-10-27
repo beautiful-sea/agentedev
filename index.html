@@ -28,11 +28,14 @@
   <link rel="stylesheet" href="story.css">
   <link rel="stylesheet" href="cinema.css">
   <link rel="stylesheet" href="native-intro.css">
+  <link rel="stylesheet" href="analytics.css">
   <script src="site-config.js" defer></script>
   <script src="script.js" defer></script>
   <script src="native-intro.js" defer></script>
+  <script src="analytics.js" defer></script>
 </head>
 <body>
+<aside id="metrics-choice" aria-label="Preferências de métricas" hidden><p>Posso usar métricas para entender as visitas e os cliques neste site? Com sua autorização, uso o Google Analytics. <a href="privacidade.html">Privacidade</a></p><div class="metrics-actions"><button type="button" data-metrics-choice="accept">Aceitar métricas</button><button type="button" data-metrics-choice="decline">Recusar métricas</button></div></aside>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="header wrap"><a class="personal-brand" href="#inicio" aria-label="Lindomar, início">LINDOMAR<span>.</span><small>AGENTEDEV.IA</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menu"><span></span><span></span></button><nav id="navigation" aria-label="Navegação principal"><a href="#consultoria">Consultoria</a><a href="#sobre">Sobre mim</a><a href="#projeto">Meu trabalho</a><a class="nav-cta" href="#contato">Fale comigo <span aria-hidden="true">↗</span></a></nav></header>
 <main id="conteudo">
@@ -90,5 +93,5 @@
       </div>
     </section>
 <section data-reveal id="contato" class="contact section"><div class="wrap"><p class="eyebrow">SUA IDEIA MERECE UMA BOA CONVERSA.</p><h2>Vamos pensar<br>no <span class="serif">próximo passo?</span><span aria-hidden="true">↗</span></h2><div class="contact-bottom"><p>Fale diretamente comigo.<br>Conte sobre seu negócio e o que você quer melhorar.</p><div class="contact-actions"><a id="contact-link" class="button dark" href="https://wa.me/5524998734138?text=Ol%C3%A1%2C%20Lindomar!%20Quero%20conversar%20sobre%20consultoria%20de%20IA." target="_blank" rel="noopener noreferrer">Conversar com Lindomar <span aria-hidden="true">↗</span></a><a id="contact-email" class="contact-email" href="mailto:lindomar1016@hotmail.com">lindomar1016@hotmail.com</a></div><p id="contact-pending" hidden>Canal de atendimento em preparação.</p></div></div></section>
-</main><footer class="footer wrap"><a class="personal-brand" href="#inicio">LINDOMAR<span>.</span><small>AGENTEDEV.IA</small></a><p>Consultoria de IA, desenvolvimento e automação.</p><p>© <span id="year">2026</span> Lindomar · AgenteDev.ia</p><a href="#inicio" class="back-top" aria-label="Voltar ao início">↑</a></footer>
+</main><footer class="footer wrap"><a class="personal-brand" href="#inicio">LINDOMAR<span>.</span><small>AGENTEDEV.IA</small></a><p>Consultoria de IA, desenvolvimento e automação.</p><p>© <span id="year">2026</span> Lindomar · AgenteDev.ia</p><a href="#inicio" class="back-top" aria-label="Voltar ao início">↑</a><button type="button" class="metrics-settings" data-metrics-settings>Preferências de métricas</button><a href="privacidade.html">Privacidade</a></footer>
 <dialog id="proof-dialog" aria-labelledby="proof-title"><div class="dialog-header"><h2 id="proof-title">Mensagem no WhatsApp</h2><button id="close-proof" aria-label="Fechar mensagem ampliada">×</button></div><img id="proof-image" alt="Recorte da mensagem com identidade e telefone preservados"><p>Texto da mensagem original. Dados de identificação ocultados.</p></dialog></body></html>

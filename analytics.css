@@ -1,0 +1,7 @@
+#metrics-choice[hidden]{display:none!important}
+#metrics-choice{position:fixed;z-index:200;bottom:16px;left:16px;right:16px;max-width:620px;margin:auto;padding:18px;background:#20221c;color:#f4f3e9;border:1px solid #747868;border-radius:16px;box-shadow:0 10px 45px #0005;font:14px/1.5 Arial,sans-serif}
+#metrics-choice p{margin:0 0 12px}#metrics-choice a{color:#d5f47a;text-decoration:underline}
+.metrics-actions{display:flex;gap:10px}.metrics-actions button{flex:1;min-height:44px;padding:10px;border:1px solid #a3aa91;border-radius:8px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.metrics-actions button:hover,.metrics-actions button:focus-visible{outline:2px solid #d5f47a;outline-offset:2px}
+.metrics-settings{font:inherit;background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:8px}
+@media(max-width:480px){#metrics-choice{bottom:10px;left:10px;right:10px;padding:14px;font-size:12px}}

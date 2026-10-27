@@ -24,4 +24,12 @@ A foto fornecida por Lindomar está em `assets/lindomar.png`. `assets/lindomar-s
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Abra `http://127.0.0.1:8765`. Não há instalação, backend, formulário de coleta ou analytics.
+Abra `http://127.0.0.1:8765`. Não há instalação, backend ou formulário de coleta. A medição fica desativada em localhost.
+
+## Métricas
+
+`analytics.js` conecta a propriedade AgenteDev.ia — Site no GA4 (`G-1FFT3KXQY1`), somente no domínio público e após aceitar métricas. `analytics.css` apresenta a escolha e `privacidade.html` explica o uso. A preferência dura até 90 dias e pode ser alterada no rodapé. Google Signals e personalização publicitária ficam desativados; medição otimizada do fluxo desativada para não enviar URLs de contatos automaticamente.
+
+Visitas usam `page_view`; botões do WhatsApp enviam `whatsapp_click`, com `button_location` igual a `intro` ou `footer`. Isso mede interesse, não mensagem enviada ou venda. Não enviamos telefone ou texto da mensagem nesses eventos. Consultas da URL são filtradas para campanhas conhecidas e o referenciador é limitado à origem.
+
+Link para a bio: `https://beautiful-sea.github.io/agentedev/?utm_source=instagram&utm_medium=organic_social&utm_campaign=perfil&utm_content=bio`. Use `stories` ou `reels` em `utm_content` para distinguir outros pontos de entrada. No relatório Aquisição de tráfego, consulte Origem/mídia da sessão e campanha `perfil`. Compare sessões com cliques no WhatsApp; visitas e cliques da bio não são a mesma contagem. Recusas de métricas, bloqueadores e visitas que não carregam a página não entram na coleta.
