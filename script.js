@@ -40,7 +40,13 @@ dialog.addEventListener('close', () => proofTrigger?.focus());
 document.querySelector('#year').textContent = new Date().getFullYear();
 const config = window.AGENTEDEV_CONFIG || {};
 const contact = document.querySelector('#contact-link');
+const contactEmail = document.querySelector('#contact-email');
 const message = 'Olá, Lindomar! Conheci a AgenteDev.ia e gostaria de conversar sobre um projeto.';
+if (config.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.email)) {
+  contactEmail.href = `mailto:${config.email}`;
+  contactEmail.textContent = config.email;
+  contactEmail.hidden = false;
+}
 if (config.whatsapp && /^\d{10,15}$/.test(config.whatsapp)) {
   contact.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`;
   contact.target = '_blank'; contact.rel = 'noopener noreferrer';
