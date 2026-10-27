@@ -16,7 +16,7 @@ Os depoimentos se referem ao Hashrate Manager, e não a todos os serviços da ag
 
 Edite `index.html`, `cinema.css` e `story.js`; `story.css` contém a base do restante da página. A abertura mobile first usa rolagem nativa para controlar retrato, tipografia em perspectiva, cartões espaciais e conexões em canvas. O canvas pausa fora da abertura e em abas ocultas. Por solicitação de Lindomar, a experiência animada inicia ativa por padrão, inclusive em dispositivos com preferência de movimento reduzido, sem exigir botão de ativação. Nenhum evento de roda ou toque é bloqueado.
 
-A foto fornecida por Lindomar está em `assets/lindomar.png`. `assets/lindomar-profissional.png` é o retrato de blazer editado com IA, escolhido novamente por Lindomar. A versão casual continua disponível como alternativa. `script.js` controla navegação, depoimentos e contatos; `site-config.js` define WhatsApp e e-mail.
+A foto fornecida por Lindomar está em `assets/lindomar.png`. `assets/lindomar-sorriso.png` é o retrato casual de camiseta, editado com IA para acrescentar um sorriso leve de boca fechada. As versões anteriores continuam disponíveis como alternativas. `script.js` controla navegação, depoimentos e contatos; `site-config.js` define WhatsApp e e-mail.
 
 ## Prévia local
 
