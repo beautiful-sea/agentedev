@@ -6,16 +6,16 @@
  const cards=[...story.querySelectorAll('[data-node]')],visual=story.querySelector('.cinema-visual');
  const canvas=document.querySelector('#connection-canvas'),ctx=canvas.getContext('2d',{alpha:true});
  const motion=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(pointer:fine)');
- let optIn=false,top=0,distance=1,target=0,progress=0,last=0,frame=0,active=-1,visible=true;
+ let optIn=true,top=0,distance=1,target=0,progress=0,last=0,frame=0,active=-1,visible=true;
  let vw=0,vh=0,dpr=1,px=0,py=0,tx=0,ty=0;
  const clamp=v=>Math.max(0,Math.min(1,v));
  const range=(v,a,b)=>clamp((v-a)/(b-a));
  const smooth=v=>v*v*(3-2*v);
  const mix=(a,b,t)=>a+(b-a)*t;
  const reduced=()=>motion.matches&&!optIn;
- const button=document.createElement('button');button.type='button';button.className='motion-choice';button.textContent='Ativar experiência animada';button.hidden=!motion.matches;pin.append(button);
+ const button=document.createElement('button');button.type='button';button.className='motion-choice';button.textContent='Ativar experiência animada';button.hidden=true;pin.append(button);
  button.addEventListener('click',()=>{optIn=true;document.documentElement.classList.add('motion-opt-in');button.hidden=true;measure();});
- document.documentElement.classList.add('story-ready');
+ document.documentElement.classList.add('story-ready','motion-opt-in');
  function scroll(){target=reduced()?0:clamp((scrollY-top)/distance);document.querySelector('.header').classList.toggle('has-scrolled',scrollY>35);start();}
  function measure(){top=story.getBoundingClientRect().top+scrollY;distance=Math.max(1,story.offsetHeight-pin.offsetHeight);const r=visual.getBoundingClientRect();vw=r.width;vh=r.height;dpr=Math.min(devicePixelRatio||1,1.7);canvas.width=Math.round((vw+100)*dpr);canvas.height=Math.round((vh+100)*dpr);ctx?.setTransform(dpr,0,0,dpr,0,0);scroll();}
  function start(){if(!frame)frame=requestAnimationFrame(render);}

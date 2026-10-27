@@ -14,9 +14,9 @@ Os depoimentos se referem ao Hashrate Manager, e não a todos os serviços da ag
 
 ## Atualizações
 
-Edite `index.html`, `cinema.css` e `story.js`; `story.css` contém a base do restante da página. A abertura mobile first usa rolagem nativa para controlar retrato, tipografia em perspectiva, cartões espaciais e conexões em canvas. O canvas pausa fora da abertura e em abas ocultas. A preferência por movimento reduzido mantém uma abertura estática, com opção explícita de ativar a experiência. Nenhum evento de roda ou toque é bloqueado.
+Edite `index.html`, `cinema.css` e `story.js`; `story.css` contém a base do restante da página. A abertura mobile first usa rolagem nativa para controlar retrato, tipografia em perspectiva, cartões espaciais e conexões em canvas. O canvas pausa fora da abertura e em abas ocultas. Por solicitação de Lindomar, a experiência animada inicia ativa por padrão, inclusive em dispositivos com preferência de movimento reduzido, sem exigir botão de ativação. Nenhum evento de roda ou toque é bloqueado.
 
-A foto fornecida por Lindomar está em `assets/lindomar.png`. `assets/lindomar-casual.png` é a versão editada com IA: camiseta lisa, luz natural e fundo discreto, preservando os traços e os óculos da referência. Substitui a versão de blazer, rejeitada por parecer formal demais. `script.js` controla navegação, depoimentos e contatos; `site-config.js` define WhatsApp e e-mail.
+A foto fornecida por Lindomar está em `assets/lindomar.png`. `assets/lindomar-profissional.png` é o retrato de blazer editado com IA, escolhido novamente por Lindomar. A versão casual continua disponível como alternativa. `script.js` controla navegação, depoimentos e contatos; `site-config.js` define WhatsApp e e-mail.
 
 ## Prévia local
 
